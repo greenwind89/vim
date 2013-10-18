@@ -4,7 +4,7 @@
 
 
 # should we remove ~/.vimrc first
-if [ -f ~/.vimrc]; then 
+if [ -f ~/.vimrc ]; then 
 	mv ~/.vimrc ~/.vimrc.bk
 fi 
  
