@@ -1,4 +1,10 @@
-vim
-===
+My Vim Repository
 
-My vim repository 
+Pathogen 
+
+To add new plugin on GitHub
+
+`
+$ git submodule add https://github.com/groenewege/vim-less.git bundle/vim-less
+$ git submodule init
+`
