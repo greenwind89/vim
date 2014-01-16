@@ -40,12 +40,12 @@
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "tlib_vim"]
-	path = tlib_vim
+[submodule "bundle/tlib_vim"]
+	path = bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
-[submodule "vim-addon-mw-utils"]
-	path = vim-addon-mw-utils
+[submodule "bundle/vim-addon-mw-utils"]
+	path = bundle/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule "vim-snipmate"]
-	path = vim-snipmate
+[submodule "bundle/vim-snipmate"]
+	path = bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
