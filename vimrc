@@ -8,8 +8,8 @@ syntax on
 filetype plugin indent on 
 
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set autoindent 
 set number
 colorscheme molokai
@@ -27,6 +27,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " delete inner word and go to insert mode
 nnoremap <leader>s viwc
 
+
 " map esc to jk
 inoremap jk <esc>
 
@@ -41,5 +42,12 @@ iabbrev fli Phpfox::getLib('
 iabbrev tas $this->template()->assign(array(
 iabbrev fgp Phpfox::getPhrase('socialad.
 iabbrev fp {phrase var='socialad
+iabbrev gup Phpfox::getUserParam('socialad.
 
+
+" Open file in new tab
+let NERDTreeMapOpenInTab='\r'
+
+" for ctrlp plugin 
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
