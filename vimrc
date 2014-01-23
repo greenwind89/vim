@@ -8,8 +8,8 @@ syntax on
 filetype plugin indent on 
 
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set autoindent 
 set number
 colorscheme molokai
@@ -42,4 +42,6 @@ iabbrev tas $this->template()->assign(array(
 iabbrev fgp Phpfox::getPhrase('socialad.
 iabbrev fp {phrase var='socialad
 
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
 
