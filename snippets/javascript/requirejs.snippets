@@ -1,3 +1,49 @@
 # test 
 snippet minh
 	minhta
+
+# define view
+snippet defineview
+	define([
+	 'backbone'
+	], function() { 
+		var ${1:view} = Backbone.View.extend({
+		});
+
+		return ${2:$1};
+	});
+
+# define model
+snippet definemodel
+	define([
+	 'backbone'
+	], function() { 
+		var ${1:model} = Backbone.Model.extend({
+		});
+
+		return ${2:$1};
+	});
+
+# define collection
+snippet definecollect
+	define([
+	 'backbone'
+	], function() { 
+		var ${1:collect} = Backbone.Collection.extend({
+		});
+
+		return ${2:$1};
+	});
+
+# define router
+snippet definerouter
+	define([
+	 'backbone',
+	 'core'
+	], function() { 
+		var core = require('core');
+		core.router.route('${1:route_name}', function(){
+			${2:function_body}
+		});
+
+	});

@@ -27,6 +27,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " delete inner word and go to insert mode
 nnoremap <leader>s viwc
 
+
 " map esc to jk
 inoremap jk <esc>
 
@@ -41,7 +42,17 @@ iabbrev fli Phpfox::getLib('
 iabbrev tas $this->template()->assign(array(
 iabbrev fgp Phpfox::getPhrase('socialad.
 iabbrev fp {phrase var='socialad
+iabbrev gup Phpfox::getUserParam('socialad.
 
+
+" Open file in new tab
+let NERDTreeMapOpenInTab='\r'
+
+<<<<<<< HEAD
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+=======
+" for ctrlp plugin 
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+>>>>>>> 20665fb020b632236c3b39531c8cb053a6a7eaf2
 
