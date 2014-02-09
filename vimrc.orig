@@ -8,17 +8,10 @@ syntax on
 filetype plugin indent on 
 
 
-" set tabstop=2
-" set shiftwidth=2
-
-set tabstop=4
-set shiftwidth=4
-
+set tabstop=2
+set shiftwidth=2
 set autoindent 
 set number
-
-" having problem with indent sensitive language like Python or jade
-set expandtab
 colorscheme molokai
 
 set laststatus=2
@@ -55,10 +48,11 @@ iabbrev gup Phpfox::getUserParam('socialad.
 " Open file in new tab
 let NERDTreeMapOpenInTab='\r'
 
-" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-" match OverLength /\%81v.\+/
+<<<<<<< HEAD
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+=======
 " for ctrlp plugin 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+>>>>>>> 20665fb020b632236c3b39531c8cb053a6a7eaf2
 
-" highlight search
-set hlsearch

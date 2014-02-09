@@ -1,1 +1,24 @@
-snippet 
+# select database
+snippet selectdb
+	$this->database()->select('${1:*}')
+		 ->from(${2:table})
+		 ->where('${3:}')
+		 ->execute('${4:getRows}');
+# get Table fox
+snippet gett
+	Phpfox::getT('
+# get service
+snippet gets
+	Phpfox::getService(
+# get user service
+snippet getsuser
+	Phpfox::getService('mfox.helper.user')->
+# update php fox table
+snippet updatedb
+	$this->database()->update(Phpfox::getT('${1}'), ${2}, '${3}');
+# get mfox service
+snippet getmfoxs
+	Phpfox::getService('mfox.helper.
+# clean input
+snippet cleaninput
+	Phpfox::getLib('parse.input')->clean(${1})
