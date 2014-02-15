@@ -62,3 +62,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " highlight search
 set hlsearch
+
+
+" set default font size
+set guifont=Monaco:h15
