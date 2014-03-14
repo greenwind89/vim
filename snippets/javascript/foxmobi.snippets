@@ -5,3 +5,68 @@ snippet mobiparam
 			${2}
 		}
 	},
+snippet post
+	var data = {
+		sLink: this.$videoUrl.val(),
+		iType: this.videoType
+	},
+		settings = {
+		'context': this, 
+		'beforeSend': this.beforeSend
+	};
+
+	utils.api.post('video/parser', data, settings).done(this.postDone).always(this.postComplete);
+snippet postfuncs
+	/**
+	 * post complete will always be called when the ajax finishes, it is the best place to collect your garbage
+	 */
+	postComplete: function() {
+	},
+
+	/**
+	 * beforesend will be called right before data is send, this is the best place to initialize your awesome handling functions
+	 */
+	beforeSend: function() {
+	},
+
+	/**
+	 * It is called when having a response returned.
+	 * Note that it will not be called if server returns status !== 200
+	 */
+	postDone: function(data, status, jqXHR) {
+		if(data.error_code > 0) {
+			utils.modal.alert(data.error_message || 'Post URL failed!'); //defensive programming
+			return false;
+		} else {
+			this.postSuccess(data);
+		}
+	},
+
+	/** 
+	 * It should be called when the response has error_code == 0 
+	 */
+	postSuccess: function (data) {
+
+	},
+snippet renderinject
+	region:{
+		main: '#main',
+		content: '#content'
+	},
+	render: function() {
+		this.$el.html(this.template());
+
+		return this;
+	},
+
+	inject: function() {
+		var main = $(this.region.main);
+		
+		main.html(this.el);
+		
+		var content = $(this.region.content);
+		
+		content.vscroll();
+
+		return this;
+	}

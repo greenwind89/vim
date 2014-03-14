@@ -47,3 +47,21 @@ snippet definerouter
 		});
 
 	});
+# define viewthex
+snippet defineviewthex
+	define([
+		'backbone',
+		${4:$3}
+	], function() { 
+		var tpl = require(${3:tpl})
+		var ${1:view} = Backbone.View.extend({
+			template: tpl,
+			render: function() {
+				this.$el.html(this.template());
+				return this;
+			}
+		});
+
+		return ${2:$1};
+	});
+

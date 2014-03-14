@@ -66,3 +66,10 @@ set hlsearch
 
 " set default font size
 set guifont=Monaco:h15
+
+
+" set to search file name 
+let g:ctrlp_by_filename = 0
+
+" show column and row number
+set ruler
