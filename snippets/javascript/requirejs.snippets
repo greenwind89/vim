@@ -2,12 +2,28 @@
 snippet minh
 	minhta
 
+#define 
+snippet define
+	define([
+	], function() {
+		'use strict';
+		${1}
+	});
 # define view
 snippet defineview
 	define([
-	 'backbone'
+		'${3:template}'
 	], function() { 
+		'use strict';
+
+		var tpl = require('${4:$3}')
+
 		var ${1:view} = Backbone.View.extend({
+			template: tpl,
+			render: function() {
+				this.$el.html(this.template());
+				return this;
+			}
 		});
 
 		return ${2:$1};
@@ -16,8 +32,9 @@ snippet defineview
 # define model
 snippet definemodel
 	define([
-	 'backbone'
 	], function() { 
+		'use strict';
+
 		var ${1:model} = Backbone.Model.extend({
 		});
 
@@ -27,8 +44,9 @@ snippet definemodel
 # define collection
 snippet definecollect
 	define([
-	 'backbone'
 	], function() { 
+		'use strict';
+
 		var ${1:collect} = Backbone.Collection.extend({
 		});
 
@@ -38,9 +56,10 @@ snippet definecollect
 # define router
 snippet definerouter
 	define([
-	 'backbone',
 	 'core'
 	], function() { 
+		'use strict';
+
 		var core = require('core');
 		core.router.route('${1:route_name}', function(){
 			${2:function_body}
@@ -50,9 +69,10 @@ snippet definerouter
 # define viewthex
 snippet defineviewthex
 	define([
-		'backbone',
 		${4:$3}
 	], function() { 
+		'use strict';
+
 		var tpl = require(${3:tpl})
 		var ${1:view} = Backbone.View.extend({
 			template: tpl,

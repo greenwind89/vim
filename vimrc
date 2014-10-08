@@ -55,8 +55,10 @@ iabbrev gup Phpfox::getUserParam('socialad.
 " Open file in new tab
 let NERDTreeMapOpenInTab='\r'
 
+" Highlight over length 80
 " highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 " match OverLength /\%81v.\+/
+
 " for ctrlp plugin 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -73,3 +75,13 @@ let g:ctrlp_by_filename = 0
 
 " show column and row number
 set ruler
+
+
+" turn on case sensitive when having captial character
+set smartcase
+
+" open tag list on right window
+let Tlist_Use_Right_Window   = 1
+
+" set ctags location
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
