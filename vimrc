@@ -7,19 +7,24 @@ syntax on
 " turn on file type plugin auto detection and enable language-dependenet indenting
 filetype plugin indent on 
 
+set expandtab
 
-" set tabstop=2
-" set shiftwidth=2
+" set tabstop=4
+" set shiftwidth=4
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+
+au FileType java setl sw=4 sts=4 et
 
 set autoindent 
 set number
 
 " having problem with indent sensitive language like Python or jade
-set expandtab
-colorscheme molokai
+" colorscheme molokai
+" colorscheme proton
+" colorscheme mayansmoke
+colorscheme summerfruit256
 
 set laststatus=2
 
@@ -55,6 +60,9 @@ iabbrev gup Phpfox::getUserParam('socialad.
 " Open file in new tab
 let NERDTreeMapOpenInTab='\r'
 
+" Ignore some file in nerdtree
+let NERDTreeIgnore = ['\.class$']
+
 " Highlight over length 80
 " highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 " match OverLength /\%81v.\+/
@@ -85,3 +93,29 @@ let Tlist_Use_Right_Window   = 1
 
 " set ctags location
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+
+" mapping open tagbar hot key
+nmap <F8> :TagbarToggle<CR>
+
+" CtrP convenience options
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip 
+set wildignore+=*/bower_components/node_modules/*,
+
+
+" project awesome 
+let g:syntastic_java_javac_classpath = "/Users/macbookair/Workspace/ISU/DistributedOS/lab2/awesome/target/classes\n/Users/macbookair/Workspace/ISU/528ProbabilisticMethod/project/lib/*.jar\n/Users/macbookair/Workspace/ISU/528ProbabilisticMethod/project/target/classes"
+
+
+" map ngs mawv/ <CR>"ty/ <CR>wvwh"ny/getters<CR>$a<CR><CR>jkxxapublic jk"tpajk"npbigetjkl~ea()<CR>{<CR><Tab>return jk"npa;<CR>}jk=<CR>jk/setters<CR>$a<CR><CR>jkxxapublic void jk"npbisetjkl~ea(jk"tpa jk"npa)<CR>{<CR><Tab>this.jk"npa= jk"npa;<CR>}jk=<CR>`ak
+
+
+"  Enable persistent undo, dir must exist
+set undodir=~/Documents/vimtemp/
+set undofile
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
+
+
