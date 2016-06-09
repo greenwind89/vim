@@ -16,9 +16,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/emmet-vim"]
-	path = bundle/emmet-vim
-	url = http://github.com/mattn/emmet-vim.git
 [submodule "bundle/tcomment"]
 	path = bundle/tcomment
 	url = https://github.com/vim-scripts/tComment.git

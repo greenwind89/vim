@@ -24,7 +24,7 @@ set number
 " colorscheme molokai
 " colorscheme proton
 " colorscheme mayansmoke
-colorscheme summerfruit256
+" colorscheme summerfruit256
 
 set laststatus=2
 
